@@ -16,6 +16,12 @@ body
   grid-template-columns: 100%
   justify-content: center
   background-color: $background-color
+  scroll-snap-type: y proximity
+  overflow-y: scroll
+
+section
+  height: 100vh
+  scroll-snap-align: start
 
 header
   display: grid
@@ -45,10 +51,9 @@ header
 #hero
   position: relative
   z-index: 1
+  margin: 7% 10%
 
   #content
-    padding: 8em
-
     p
       margin: 0
       text-transform: uppercase
