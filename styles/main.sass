@@ -49,10 +49,10 @@ header
             opacity: 1
 
 sidebar
+  display: flex
   height: 100%
   position: fixed
   vertical-align: baseline
-  display: none
   flex-direction: column
   justify-content: center
 
@@ -60,34 +60,36 @@ sidebar
     list-style-type: none
     padding: 0
     li
-      padding: 15px 5px 
+      padding: 30px 5px 
 
       &::before
         content: ''
         margin: -2px 10px 0 0
         display: inline-block
         vertical-align: middle
-        height: 1px
-        width: 30px
+        height: 3px
+        width: 10px
         background-color: $dark-secondary 
       a
-        opacity: 0.7
+        opacity: 0.4
         text-transform: uppercase
         text-decoration: none
         color: $primary-color
         letter-spacing: 3px
+        font-size: 1.2em
         box-shadow: 0 0 0 0 $dark-secondary inset
-        transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out
+        transition: box-shadow 150ms ease-in-out, color 150ms ease-in-out, font-size 150ms ease-in-out
 
         &:hover
-            box-shadow: 50px 0 0 0 $dark-secondary inset
+            box-shadow: 30px 0 0 0 $dark-secondary inset
             opacity: 1
+            font-size: 1.4em
 
 
 #hero
   position: relative
   z-index: 1
-  margin: 8% 14%
+  margin: 8% 20%
 
   #content
     p
@@ -149,7 +151,7 @@ sidebar
     transform: translateX(100%)
 
 .details
-  margin: 1% 14%
+  margin: 1% 20%
   h1
     color: $secondary-color
     font-weight: 700
