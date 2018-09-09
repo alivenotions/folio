@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700')
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600,700|Monospace')
 
 $fonts: Raleway, sans-serif
 
@@ -18,6 +18,7 @@ body
   background-color: $background-color
   scroll-snap-type: y proximity
   overflow-y: scroll
+  color: $primary-color
 
 section
   height: 100vh
@@ -36,7 +37,7 @@ header
         display: inline
         a
           color: $primary-color
-          opacity: 0.4
+          opacity: 0.6
           text-transform: uppercase
           text-decoration: none
           padding: 8px 20px
@@ -49,7 +50,7 @@ header
             opacity: 1
 
 sidebar
-  display: flex
+  display: none /* change to flex*/
   height: 100%
   position: fixed
   vertical-align: baseline
@@ -71,7 +72,7 @@ sidebar
         width: 10px
         background-color: $dark-secondary 
       a
-        opacity: 0.4
+        opacity: 0.6
         text-transform: uppercase
         text-decoration: none
         color: $primary-color
@@ -105,6 +106,24 @@ sidebar
       &:nth-child(2)
         color: $secondary-color
         font-weight: 700
+    
+    .write-up
+      opacity: 1
+      font-size: 1.7em
+      padding: 30px 2px
+      font-family: monospace
+      animation: fadeIn 2s ease-in-out
+      transition: transform 2s ease
+
+.special-word
+  box-shadow: 0px -3px 0 0 $dark-secondary inset
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+    transform: translateX(-25px)
+  100%
+    opacity: 1
 
 .anim
   position: relative
@@ -157,3 +176,7 @@ sidebar
     font-weight: 700
     font-size: 7em
     margin: 0
+
+  .skills
+    display: grid
+    grid-template-columns: 50% auto
